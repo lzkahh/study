@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
@@ -14,12 +14,15 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:v100
+        image: nginx:1.17.7
         imagePullPolicy: IfNotPresent
         resources:
           limits:
             cpu: 2
             memory: 2Gi
+          requests:
+            cpu: 200m
+            memory: 512Mi
       #   volumeMounts:
       #   - name: config
       #     mountPath: /etc/nginx/nginx.conf
