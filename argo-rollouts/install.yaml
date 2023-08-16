@@ -14508,7 +14508,6 @@ spec:
                         type: string
                     required:
                     - arn
-                    - fullName
                     - name
                     type: object
                   loadBalancer:
@@ -14521,7 +14520,6 @@ spec:
                         type: string
                     required:
                     - arn
-                    - fullName
                     - name
                     type: object
                   stableTargetGroup:
@@ -14534,7 +14532,6 @@ spec:
                         type: string
                     required:
                     - arn
-                    - fullName
                     - name
                     type: object
                 type: object
@@ -15126,7 +15123,7 @@ spec:
         app.kubernetes.io/name: argo-rollouts
     spec:
       containers:
-      - image: quay.io/argoproj/argo-rollouts:v1.5.0
+      - image: quay.io/argoproj/argo-rollouts:v1.5.1
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 3
